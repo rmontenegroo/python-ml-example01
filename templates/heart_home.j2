@@ -1,0 +1,32 @@
+<html>
+    <body>
+        <h3>Heart example prediction</h3>
+        <p>You may:</p>
+        <ul>
+            <li>
+                <p>Upload a CSV containing subjects data below:</p>
+                <form action="/heart" method="POST" enctype="multipart/form-data">
+                    Arquivo de dados (CSV): <input type="file" name="input"/> <input type="submit" value="Enviar arquivo"/>
+                </form>
+            </li>
+            <li>
+                <p>Upload your file using a client like curl:</p>
+                <div  style="background-color: black; width: 30%; padding: 5px; color: white; margin: 2px;">
+                    <i># curl -s -F "input=@heart_unknown.csv" "http://localhost:8080/heart"</i>
+                </div>
+            </li>
+            <li>
+                <p>Submit your data POSTing a JSON payload:</p>
+                <div style="background-color: black; width: 30%; padding: 5px; color: white; margin: 2px;">
+                    <i># curl -s -X POST -H "Content-type: application/json" "http://localhost:8080/heart" -d '     <br>
+                        {                                                                                           <br>
+                            "subj01" : [65.0, 0.0, 2.0, 160.0, 360.0, 0.0, 0.0, 151.0, 0.0, 0.8, 2.0, 0.0, 2.0],    <br>
+                            "subj02" : [56.0, 1.0, 3.0, 120.0, 193.0, 0.0, 0.0, 162.0, 0.0, 1.9, 1.0, 0.0, 3.0]     <br>
+                        }'                                                                                          <br>
+                    </i>
+                </div>
+            </li>
+        </ul>
+        <a href="/">home</a>
+    </body>
+</html>
