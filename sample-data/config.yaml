@@ -1,0 +1,6 @@
+ssh_authorized_keys:
+- github:rmontenegroo
+hostname: k8s-02
+k3os:
+  server_url: https://k8s-01:6443
+  token: K102f9577af0ae184f85dcf36fbe419471a5665b34867b5cbd26664832765c479fa::server:5582134f241a79af3734e7939e782e39
